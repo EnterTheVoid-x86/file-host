@@ -17,7 +17,7 @@ const config: z.input<typeof Schema_Config> = {
    * @default process.env.NEXT_PUBLIC_DOMAIN
    * @fallback process.env.NEXT_PUBLIC_VERCEL_URL
    */
-  basePath: `https://${BASE_URL}`,
+  basePath: `https://archimax.vercel.app`,
 
   /**
    * Show deploy guide dropdown on navbar
