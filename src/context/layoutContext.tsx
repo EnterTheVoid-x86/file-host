@@ -1,15 +1,15 @@
 import React, { createContext, useEffect, useState, useTransition } from "react";
 
-export type TLayout = "grid" | "list";
+export type TLayout = "list" | "grid";
 
 const getLayoutFromLocalStorage = (): TLayout => {
   if (typeof window !== "undefined") {
     const layout = localStorage.getItem("layout");
-    if (layout === "grid" || layout === "list") {
+    if (layout === "list" || layout === "grid") {
       return layout;
     }
   }
-  return "grid";
+  return "layout";
 };
 
 export type TLayoutContext = {
@@ -30,7 +30,7 @@ type TLayoutProvider = {
   children: React.ReactNode;
 };
 export const LayoutProvider = ({ children }: TLayoutProvider) => {
-  const [layout, setLayout] = useState<TLayout>("grid");
+  const [layout, setLayout] = useState<TLayout>("list");
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
