@@ -16,7 +16,7 @@ export const USE_CACHE = false;
  *
  * On development, it will use `http://localhost:3000`
  */
-export const BASE_URL = archimax.vercel.app
+export const BASE_URL = "archimax.vercel.app"
   process.env.NODE_ENV === "production"
     ? process.env.NEXT_PUBLIC_DOMAIN ??
       process.env.VERCEL_PROJECT_PRODUCTION_URL ??
